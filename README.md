@@ -1,62 +1,61 @@
-# Tardis — SNCF Train Delay Prediction
+# Tardis — Prédiction des Retards SNCF
 
-A data science project for analyzing historical SNCF train delay data, building a predictive ML model, and presenting insights through an interactive Streamlit dashboard.
+Projet de data science pour analyser les données historiques de retards des trains SNCF, construire un modèle de prédiction par machine learning et présenter les résultats via un dashboard interactif Streamlit.
 
-## What it does
+## Fonctionnalités
 
-- **Data cleaning & EDA** — loads, cleans, and explores the SNCF delay dataset
-- **Prediction model** — regression model to estimate delay duration (in minutes) from journey characteristics
-- **Interactive dashboard** — Streamlit app to explore data and get delay predictions in real time
+- **Nettoyage des données & EDA** — chargement, nettoyage et exploration du dataset SNCF
+- **Modèle de prédiction** — modèle de régression pour estimer la durée des retards (en minutes) à partir des caractéristiques du trajet
+- **Dashboard interactif** — application Streamlit pour explorer les données et obtenir des prédictions en temps réel
 
-## Project structure
+## Structure du projet
 
 ```
-├── tardis_eda.ipynb        # Data cleaning, exploration, and feature engineering
-├── tardis_model.ipynb      # Model training and evaluation
-├── tardis_dashboard.py     # Interactive Streamlit dashboard
-├── project_dataset.csv     # Raw dataset
-├── cleaned_dataset.csv     # Processed dataset (output of EDA notebook)
-├── model.pkl               # Trained model (saved for dashboard integration)
-└── readme.md               # This file
+├── tardis_eda.ipynb        # Nettoyage, exploration et feature engineering
+├── tardis_model.ipynb      # Entraînement et évaluation du modèle
+├── tardis_dashboard.py     # Dashboard interactif Streamlit
+├── project_dataset.csv     # Dataset brut
+├── cleaned_dataset.csv     # Dataset traité (sortie du notebook EDA)
+└── model.pkl               # Modèle entraîné (sauvegardé pour le dashboard)
 ```
 
-## Setup
+## Installation
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn streamlit
 ```
 
-## Run the dashboard
+## Lancer le dashboard
 
 ```bash
 streamlit run tardis_dashboard.py
 ```
 
-## Dashboard features
+## Fonctionnalités du dashboard
 
-- Delay distribution visualization
-- Summary statistics (average delay, total trips, punctuality rate)
-- Prediction interface: input journey parameters → get estimated delay
-- Interactive filters by station, route, or time period
+- Visualisation de la distribution des retards
+- Statistiques résumées (retard moyen, nombre total de trajets, taux de ponctualité)
+- Interface de prédiction : saisir les paramètres du trajet → obtenir le retard estimé
+- Filtres interactifs par gare, ligne ou période
 
-## Model
+## Modèle
 
-The model predicts delay duration (continuous value in minutes) using features like:
-- Departure station
-- Arrival station
-- Day of week
-- Train type
+Le modèle prédit la durée du retard (valeur continue en minutes) à partir de :
+- Gare de départ
+- Gare d'arrivée
+- Jour de la semaine
+- Type de train
 
-Evaluation metrics: RMSE, MAE, R²
+Métriques d'évaluation : RMSE, MAE, R²
 
-## Tech stack
+## Stack technique
 
 - Python
 - pandas, numpy, matplotlib, seaborn
 - scikit-learn
 - Streamlit
-- Code formatted with `ruff`
+- Formatage du code avec `ruff`
 
-## Project context
+## Contexte du projet
 
-Built as part of an Epitech data science project. The goal was to clean real-world data, build and justify a ML model, and make it accessible through a clean interactive dashboard.
+Réalisé dans le cadre d'un projet data science Epitech. L'objectif était de nettoyer des données réelles, construire et justifier un modèle ML, puis le rendre accessible via un dashboard interactif.
